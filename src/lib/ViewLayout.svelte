@@ -18,7 +18,7 @@
 
 <style>
 	section {
-		padding: 1rem;
+		padding: 1.5rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
