@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  font-family: 'Raleway', sans-serif;
+  --primary-color: #4B7FD2;
+  --text-color: #1A2B38;
+  --bg-color: #F4F5F7;
+  --dim-bg-color: #DFE1E5;
+  --selection-color: #B9BFCB;
+  --white: #ffffff;
+}
+
+*::selection {
+  background-color: var(--selection-color);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--white);
+}
+
+#svelte {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}

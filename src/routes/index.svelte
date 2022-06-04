@@ -1,10 +1,7 @@
 <script lang="ts">
-	import MobXIcon from '~icons/logos/mobx';
+	import ViewLayout from '$lib/ViewLayout.svelte';
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<div />
-<p>
-	Visit <MobXIcon width={40} height={40} /> <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read
-	the documentation
-</p>
+<ViewLayout background botSkew height={56}>
+	<h1>Hi, I am Zhijie Zhu</h1>
+</ViewLayout>
