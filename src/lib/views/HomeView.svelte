@@ -1,3 +1,7 @@
+<script lang="ts">
+	import ArrowIcon from '~icons/akar-icons/arrow-down';
+</script>
+
 <h3>Hi, I am</h3>
 <h1>Richard Zhu</h1>
 <h2>I work with web and data.</h2>
@@ -5,6 +9,9 @@
 	I am currently studying Master of IT at UNSW. I am also one of the CSESoc Projects Team. You know
 	what I&apos;m most proud of? I&apos;m 1/3 of logicpop.
 </p>
+<div class="button-container">
+	<button>My Projects <ArrowIcon width={20} height={20} /></button>
+</div>
 
 <style>
 	h1 {
@@ -24,5 +31,27 @@
 	p {
 		font-size: 1.5rem;
 		font-weight: 500;
+	}
+	.button-container {
+		margin: 1rem 0 1rem 0;
+	}
+	.button-container button {
+		width: 10rem;
+		padding: 0.5rem 1rem 0.5rem 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 0.2rem;
+		border: 2px solid var(--primary-color);
+		background-color: var(--primary-color);
+		color: var(--white);
+		fill: var(--text-color);
+		cursor: pointer;
+		user-select: none;
+		transition-duration: var(--transition-time);
+	}
+	.button-container button:hover {
+		color: var(--primary-color);
+		background-color: var(--bg-color);
 	}
 </style>

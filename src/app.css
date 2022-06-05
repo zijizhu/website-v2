@@ -9,6 +9,7 @@
   --dim-bg-color: #DFE1E5;
   --selection-color: #B9BFCB;
   --white: #ffffff;
+  --transition-time: 150ms;
 }
 
 *::selection {
@@ -27,4 +28,12 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
 }

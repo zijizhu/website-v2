@@ -3,6 +3,6 @@
 	import HomeView from '$lib/views/HomeView.svelte';
 </script>
 
-<ViewLayout background botSkew height={48}>
+<ViewLayout background botSkew height={40}>
 	<HomeView />
 </ViewLayout>
