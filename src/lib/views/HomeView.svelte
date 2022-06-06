@@ -22,17 +22,19 @@
 		About Me
 		<PersonIcon width={20} height={20} />
 	</button>
-	<a href="https://www.linkedin.com/in/richard-zhu-28965421b/">
-		<LinkedinIcon width={25} height={25} />
-	</a>
-	<a href="https://github.com/zijizhu">
-		<GitHubIcon width={25} height={25} />
-	</a>
+	<div class="link-container">
+		<a href="https://www.linkedin.com/in/richard-zhu-28965421b/">
+			<LinkedinIcon width={30} height={30} />
+		</a>
+		<a href="https://github.com/zijizhu">
+			<GitHubIcon width={30} height={30} />
+		</a>
+	</div>
 </div>
 
 <style>
 	h1 {
-		font-size: 4rem;
+		font-size: 3rem;
 		line-height: 1;
 		margin: 1rem 0 1rem 0;
 	}
@@ -46,9 +48,18 @@
 		margin: 0.5rem 0 0.5rem 0;
 	}
 	p {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		font-weight: 500;
 	}
+	@media (min-width: 640px) {
+		h1 {
+			font-size: 4rem;
+		}
+		p {
+			font-size: 1.5rem;
+		}
+	}
+
 	.button-container {
 		display: flex;
 		flex-direction: column;
@@ -61,10 +72,11 @@
 			align-items: center;
 		}
 	}
+
 	.main-button {
 		min-width: 10rem;
 		padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-		margin: 0 1rem 0 0;
+		margin: 0.5rem 1rem 0.5rem 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -91,12 +103,23 @@
 		color: var(--text-color);
 		background-color: var(--dim-bg-color);
 	}
-	.button-container a {
-		margin: 0.25rem 0.5rem 0 0.5rem;
+
+	.link-container {
+		display: flex;
+		padding-top: 1rem;
+	}
+	@media (min-width: 640px) {
+		.link-container {
+			padding-top: 0;
+			padding-left: 1rem;
+		}
+	}
+	.link-container a {
+		margin: 0 1rem 0 0;
 		color: var(--text-color);
 		transition-duration: var(--transition-time);
 	}
-	.button-container a:hover {
+	.link-container a:hover {
 		color: var(--primary-color);
 	}
 </style>
