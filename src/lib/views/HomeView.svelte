@@ -1,8 +1,8 @@
 <script lang="ts">
-	import ProjectIcon from '~icons/ant-design/project-filled';
 	import PersonIcon from '~icons/bi/person-fill';
-	import LinkedinIcon from '~icons/akar-icons/linkedin-box-fill';
 	import GitHubIcon from '~icons/akar-icons/github-fill';
+	import ProjectIcon from '~icons/ant-design/project-filled';
+	import LinkedinIcon from '~icons/akar-icons/linkedin-box-fill';
 </script>
 
 <h3>Hi, I am</h3>
