@@ -1,6 +1,8 @@
 <script lang="ts">
 	import ProjectIcon from '~icons/ant-design/project-filled';
 	import PersonIcon from '~icons/bi/person-fill';
+	import LinkedinIcon from '~icons/akar-icons/linkedin-box-fill';
+	import GitHubIcon from '~icons/akar-icons/github-fill';
 </script>
 
 <h3>Hi, I am</h3>
@@ -13,8 +15,19 @@
 </p>
 
 <div class="button-container">
-	<button class="project-button">My Projects <ProjectIcon width={20} height={20} /></button>
-	<button class="about-button">About Me <PersonIcon width={20} height={20} /></button>
+	<button class="main-button project-button">
+		My Projects <ProjectIcon width={20} height={20} />
+	</button>
+	<button class="main-button about-button">
+		About Me
+		<PersonIcon width={20} height={20} />
+	</button>
+	<a href="https://www.linkedin.com/in/richard-zhu-28965421b/">
+		<LinkedinIcon width={25} height={25} />
+	</a>
+	<a href="https://github.com/zijizhu">
+		<GitHubIcon width={25} height={25} />
+	</a>
 </div>
 
 <style>
@@ -38,9 +51,10 @@
 	}
 	.button-container {
 		display: flex;
+		align-items: center;
 		margin: 1rem 0 1rem 0;
 	}
-	.button-container button {
+	.main-button {
 		width: 10rem;
 		padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 		margin: 0 1rem 0 0;
@@ -69,5 +83,13 @@
 	.about-button:hover {
 		color: var(--text-color);
 		background-color: var(--dim-bg-color);
+	}
+	.button-container a {
+		margin: 0.25rem 0.5rem 0 0.5rem;
+		color: var(--text-color);
+		transition-duration: var(--transition-time);
+	}
+	.button-container a:hover {
+		color: var(--primary-color);
 	}
 </style>
