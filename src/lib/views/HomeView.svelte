@@ -17,7 +17,7 @@
 	<button class="about-button">About Me <PersonIcon width={20} height={20} /></button>
 </div>
 
-<style lang="scss">
+<style>
 	h1 {
 		font-size: 4rem;
 		line-height: 1;
@@ -59,7 +59,7 @@
 	}
 	.project-button:hover {
 		color: var(--primary-color);
-		background-color: var(--bg-color);
+		background-color: var(--dim-bg-color);
 	}
 	.about-button {
 		border: 2px solid var(--text-color);
@@ -68,6 +68,6 @@
 	}
 	.about-button:hover {
 		color: var(--text-color);
-		background-color: var(--bg-color);
+		background-color: var(--dim-bg-color);
 	}
 </style>
