@@ -80,7 +80,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		border-radius: 0.2rem;
+		border-radius: var(--theme-radius);
 		cursor: pointer;
 		user-select: none;
 		transition-duration: var(--transition-time);

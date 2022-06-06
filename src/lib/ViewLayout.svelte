@@ -18,7 +18,7 @@
 
 <style>
 	section {
-		padding: 1.5rem;
+		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -27,7 +27,7 @@
 	.view-container {
 		display: flex;
 		width: 100%;
-		max-width: 52rem;
+		max-width: 60rem;
 		flex-direction: column;
 	}
 	.background {

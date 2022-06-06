@@ -1,6 +1,14 @@
+<script lang="ts">
+	import ProjectCard from '$lib/ProjectCard.svelte';
+</script>
+
 <h1>Projects 💻</h1>
 
 <h2>Check out a few projects I've involved in</h2>
+
+<ProjectCard />
+<ProjectCard />
+<ProjectCard />
 
 <style>
 	h1 {

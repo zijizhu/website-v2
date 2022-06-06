@@ -11,6 +11,7 @@
   --white: #ffffff;
 
   --transition-time: 150ms;
+  --theme-radius: 0.2rem;
 }
 
 *::selection {
