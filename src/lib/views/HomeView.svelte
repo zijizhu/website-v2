@@ -51,11 +51,18 @@
 	}
 	.button-container {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 		margin: 1rem 0 1rem 0;
 	}
+	@media (min-width: 640px) {
+		.button-container {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
 	.main-button {
-		width: 10rem;
+		min-width: 10rem;
 		padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 		margin: 0 1rem 0 0;
 		display: flex;
