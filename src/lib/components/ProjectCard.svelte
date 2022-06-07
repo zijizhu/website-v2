@@ -38,12 +38,12 @@
 			<div class="link-container">
 				<span>view it on</span>
 				{#if project.sourceLink}
-					<a href="https://github.com/zijizhu">
+					<a href={project.sourceLink}>
 						<GitHubIcon width={30} height={30} />
 					</a>
 				{/if}
 				{#if project.downloadLink}
-					<a href="https://github.com/zijizhu">
+					<a href={project.downloadLink}>
 						<AppStoreIcon width={35} height={35} />
 					</a>
 				{/if}
