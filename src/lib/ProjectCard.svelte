@@ -1,6 +1,10 @@
 <script lang="ts">
 	import LinkIcon from '~icons/akar-icons/link-chain';
+	import TechIcon from '$lib/TechIcon.svelte';
+	import type { IconName } from 'src/types';
+
 	export let imgPos: 'left' | 'right' = 'left';
+	let names: IconName[] = ['react', 'mst', 'firebase'];
 </script>
 
 <div class="container" class:container-reverse={imgPos === 'right'}>
@@ -20,21 +24,30 @@
 			Footsteps aims to link a students schooling experience with relevant industry mentors who will
 			guide them through their studies and decision on future career choices. (MVP)
 		</p>
+
+		<div class="icon-container">
+			{#each names as iconName}
+				<TechIcon name={iconName} />
+			{/each}
+		</div>
 	</div>
 </div>
 
 <style>
 	.container {
-		width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 1rem 0 1rem 0;
+		margin: 1rem 0 1rem 0;
+		border-radius: 0.5rem;
+		background-color: var(--bg-color);
 	}
 	@media (min-width: 768px) {
 		.container {
 			flex-direction: row;
+			border-radius: 0;
+			background-color: transparent;
 		}
 		.container-reverse {
 			flex-direction: row-reverse;
@@ -46,7 +59,6 @@
 		width: 100%;
 		height: auto;
 		border-radius: 0.5rem;
-		border: 3px solid var(--selection-color);
 	}
 
 	.description-container {
@@ -56,7 +68,15 @@
 		align-items: flex-start;
 		padding: 1rem;
 	}
+	@media (min-width: 768px) {
+		.description-container {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+
 	h3 {
+		margin: 1rem 0 1rem 0;
 		font-size: 1.75rem;
 		line-height: 1;
 	}
@@ -73,5 +93,8 @@
 	p {
 		font-size: 1.25rem;
 		font-weight: 500;
+	}
+	.icon-container {
+		display: flex;
 	}
 </style>
