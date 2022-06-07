@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ViewLayout from '$lib/ViewLayout.svelte';
+	import ViewLayout from '$lib/components/ViewLayout.svelte';
 	import HomeView from '$lib/views/HomeView.svelte';
 	import ProjectView from '$lib/views/ProjectView.svelte';
 </script>

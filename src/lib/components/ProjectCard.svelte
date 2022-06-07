@@ -3,7 +3,7 @@
 	import GitHubIcon from '~icons/akar-icons/github-fill';
 	import AppStoreIcon from '~icons/ion/logo-apple-appstore';
 
-	import TechIcon from '$lib/TechIcon.svelte';
+	import TechIcon from '$lib/components/TechIcon.svelte';
 	import type { ProjectInfo } from 'src/types';
 
 	export let project: ProjectInfo;

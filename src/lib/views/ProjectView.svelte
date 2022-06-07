@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ProjectCard from '$lib/ProjectCard.svelte';
-	import Accordion from '$lib/Accordion.svelte';
+	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import Accordion from '$lib/components/Accordion.svelte';
 	import projects from '$lib/data/projects';
 </script>
 
