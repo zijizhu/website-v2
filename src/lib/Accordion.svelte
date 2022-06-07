@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import ChevronIcon from '~icons/akar-icons/chevron-right';
+
 	export let title: string;
 	let isOpen = true;
 

@@ -13,17 +13,17 @@
 </script>
 
 {#if name === 'react'}
-	<ReactIcon width={30} height={30} style="margin-right: 0.5rem; color: #0074a6;" />
+	<ReactIcon width={35} height={35} style="margin-right: 0.5rem; color: #0074a6;" />
 {:else if name === 'firebase'}
-	<FirebaseIcon width={30} height={30} style="margin-right: 0.5rem;" />
+	<FirebaseIcon width={35} height={35} style="margin-right: 0.5rem;" />
 {:else if name === 'material'}
-	<MaterialIcon width={30} height={30} style="margin-right: 0.5rem;" />
+	<MaterialIcon width={35} height={35} style="margin-right: 0.5rem;" />
 {:else if name === 'typescript'}
-	<TypeScriptIcon width={30} height={30} style="margin-right: 0.5rem;" />
+	<TypeScriptIcon width={35} height={35} style="margin-right: 0.5rem;" />
 {:else if name === 'mst'}
-	<MobXIcon width={30} height={30} style="margin-right: 0.5rem;" />
+	<MobXIcon width={35} height={35} style="margin-right: 0.5rem;" />
 {:else if name === 'database'}
-	<SqlIcon width={30} height={30} style="margin-right: 0.5rem;" />
+	<SqlIcon width={35} height={35} style="margin-right: 0.5rem;" />
 {:else}
-	<Unknown width={30} height={30} style="margin-right: 0.5rem;" />
+	<Unknown width={35} height={35} style="margin-right: 0.5rem;" />
 {/if}

@@ -1,13 +1,16 @@
 <script lang="ts">
 	import LinkIcon from '~icons/akar-icons/link-chain';
-	import TechIcon from '$lib/TechIcon.svelte';
-	import type { IconName } from 'src/types';
+	import GitHubIcon from '~icons/akar-icons/github-fill';
+	import AppStoreIcon from '~icons/ion/logo-apple-appstore';
 
-	export let imgPos: 'left' | 'right' = 'left';
+	import TechIcon from '$lib/TechIcon.svelte';
+	import type { IconName, ProjectInfo } from 'src/types';
+
 	let names: IconName[] = ['react', 'mst', 'firebase'];
+	let project: ProjectInfo;
 </script>
 
-<div class="container" class:container-reverse={imgPos === 'right'}>
+<div class="container">
 	<img src="footsteps.png" alt="Footsteps" />
 
 	<div class="description-container">
@@ -30,6 +33,15 @@
 				<TechIcon name={iconName} />
 			{/each}
 		</div>
+		<div class="link-container">
+			<span>view it on</span>
+			<a href="https://github.com/zijizhu">
+				<GitHubIcon width={30} height={30} />
+			</a>
+			<a href="https://github.com/zijizhu">
+				<AppStoreIcon width={35} height={35} />
+			</a>
+		</div>
 	</div>
 </div>
 
@@ -48,9 +60,6 @@
 			flex-direction: row;
 			border-radius: 0;
 			background-color: transparent;
-		}
-		.container-reverse {
-			flex-direction: row-reverse;
 		}
 	}
 
@@ -75,6 +84,7 @@
 		}
 	}
 
+	/* styles for chidren of description-container */
 	h3 {
 		margin: 1rem 0 1rem 0;
 		font-size: 1.75rem;
@@ -92,9 +102,28 @@
 	}
 	p {
 		font-size: 1.25rem;
-		font-weight: 500;
+		margin: 0.75rem 0 0.75rem 0;
 	}
 	.icon-container {
 		display: flex;
+		margin: 0.5rem 0 0.5rem 0;
+	}
+	.link-container {
+		display: flex;
+		align-items: center;
+		margin: 0.5rem 0 0.5rem 0;
+	}
+	.link-container span {
+		margin-right: 1rem;
+	}
+	.link-container a {
+		display: flex;
+		align-items: center;
+		margin: 0 1rem 0 0;
+		color: var(--text-color);
+		transition-duration: var(--transition-time);
+	}
+	.link-container a:hover {
+		color: var(--primary-color);
 	}
 </style>

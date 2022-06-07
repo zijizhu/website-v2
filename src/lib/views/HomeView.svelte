@@ -49,7 +49,6 @@
 	}
 	p {
 		font-size: 1.25rem;
-		font-weight: 500;
 	}
 	@media (min-width: 640px) {
 		h1 {
@@ -115,7 +114,9 @@
 		}
 	}
 	.link-container a {
-		margin: 0 1rem 0 0;
+		display: flex;
+		align-items: center;
+		margin-right: 1rem;
 		color: var(--text-color);
 		transition-duration: var(--transition-time);
 	}
