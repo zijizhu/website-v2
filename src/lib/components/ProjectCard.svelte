@@ -17,9 +17,11 @@
 
 		<span class="project-link">
 			{project.event}
-			<a href={project.link}>
-				<LinkIcon width={25} height={25} />
-			</a>
+			{#if project.link}
+				<a href={project.link}>
+					<LinkIcon width={25} height={25} />
+				</a>
+			{/if}
 		</span>
 
 		<p>
@@ -31,6 +33,7 @@
 				<TechIcon name={iconName} />
 			{/each}
 		</div>
+
 		{#if project.sourceLink || project.downloadLink}
 			<div class="link-container">
 				<span>view it on</span>
