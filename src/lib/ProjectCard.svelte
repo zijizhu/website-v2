@@ -8,12 +8,14 @@
 
 	<div class="description-container">
 		<h3>Footsteps</h3>
+
 		<span class="project-link">
 			UNSW CSESoc Hackathon 2021 Prospa Beginner Prize
 			<a href="https://github.com/zijizhu/footsteps">
 				<LinkIcon width={25} height={25} />
 			</a>
 		</span>
+
 		<p>
 			Footsteps aims to link a students schooling experience with relevant industry mentors who will
 			guide them through their studies and decision on future career choices. (MVP)
