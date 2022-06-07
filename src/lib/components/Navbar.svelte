@@ -46,7 +46,6 @@
 		margin: 1rem;
 		user-select: none;
 		padding: 0.5rem 1rem 0.25rem 1rem;
-		/* border: 2px solid var(--selection-color); */
 		background-color: var(--dim-bg-color);
 		border-radius: var(--theme-radius);
 		z-index: 20;
