@@ -34,3 +34,8 @@ input {
   line-height: inherit;
   color: inherit;
 }
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}

@@ -99,7 +99,6 @@
 		display: inline;
 		font-weight: 600;
 		font-size: 1.25rem;
-		text-decoration: none;
 		color: var(--primary-color);
 	}
 	.project-link a {

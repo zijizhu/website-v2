@@ -3,6 +3,7 @@
 	import ChevronIcon from '~icons/akar-icons/chevron-right';
 
 	export let title: string;
+
 	let isOpen = true;
 
 	function toggleOpen() {
