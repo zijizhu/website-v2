@@ -4,44 +4,48 @@
 	import AppStoreIcon from '~icons/ion/logo-apple-appstore';
 
 	import TechIcon from '$lib/TechIcon.svelte';
-	import type { IconName, ProjectInfo } from 'src/types';
+	import type { ProjectInfo } from 'src/types';
 
-	let names: IconName[] = ['react', 'mst', 'firebase'];
-	let project: ProjectInfo;
+	export let project: ProjectInfo;
 </script>
 
 <div class="container">
-	<img src="footsteps.png" alt="Footsteps" />
+	<img src={project.image} alt="Footsteps" />
 
 	<div class="description-container">
-		<h3>Footsteps</h3>
+		<h3>{project.name}</h3>
 
 		<span class="project-link">
-			UNSW CSESoc Hackathon 2021 Prospa Beginner Prize
-			<a href="https://github.com/zijizhu/footsteps">
+			{project.event}
+			<a href={project.link}>
 				<LinkIcon width={25} height={25} />
 			</a>
 		</span>
 
 		<p>
-			Footsteps aims to link a students schooling experience with relevant industry mentors who will
-			guide them through their studies and decision on future career choices. (MVP)
+			{project.detail}
 		</p>
 
 		<div class="icon-container">
-			{#each names as iconName}
+			{#each project.techIconNames as iconName}
 				<TechIcon name={iconName} />
 			{/each}
 		</div>
-		<div class="link-container">
-			<span>view it on</span>
-			<a href="https://github.com/zijizhu">
-				<GitHubIcon width={30} height={30} />
-			</a>
-			<a href="https://github.com/zijizhu">
-				<AppStoreIcon width={35} height={35} />
-			</a>
-		</div>
+		{#if project.sourceLink || project.downloadLink}
+			<div class="link-container">
+				<span>view it on</span>
+				{#if project.sourceLink}
+					<a href="https://github.com/zijizhu">
+						<GitHubIcon width={30} height={30} />
+					</a>
+				{/if}
+				{#if project.downloadLink}
+					<a href="https://github.com/zijizhu">
+						<AppStoreIcon width={35} height={35} />
+					</a>
+				{/if}
+			</div>
+		{/if}
 	</div>
 </div>
 
@@ -79,6 +83,7 @@
 	}
 	@media (min-width: 768px) {
 		.description-container {
+			margin-left: 1rem;
 			padding-left: 1rem;
 			padding-right: 1rem;
 		}

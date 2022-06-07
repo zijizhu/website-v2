@@ -18,7 +18,7 @@
 </button>
 
 {#if isOpen}
-	<div transition:slide={{ duration: 300 }} class="projects-container">
+	<div transition:slide={{ duration: 500 }} class="projects-container">
 		<slot />
 	</div>
 {/if}

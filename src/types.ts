@@ -4,7 +4,7 @@ export type IconName = 'database' | 'firebase' | 'material' | 'typescript' | 'ms
 
 export interface ProjectInfo {
 	name: string;
-	description: string;
+	event: string;
 	link?: string;
 	detail: string;
 	sourceLink?: string;
