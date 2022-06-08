@@ -8,11 +8,13 @@
 
 <h2>Check out a few projects I've involved in</h2>
 
-<Accordion title="Mobile and Web Apps">
-	{#each projects as project}
-		<ProjectCard {project} />
-	{/each}
-</Accordion>
+<div class="animation-wrapper">
+	<Accordion title="Mobile and Web Apps">
+		{#each projects as project}
+			<ProjectCard {project} />
+		{/each}
+	</Accordion>
+</div>
 
 <style>
 	h1 {
@@ -23,6 +25,9 @@
 	}
 	h2 {
 		color: var(--primary-color);
+		animation: 3s ease 0s normal forwards 1 fadein;
+	}
+	.animation-wrapper {
 		animation: 3s ease 0s normal forwards 1 fadein;
 	}
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { afterUpdate } from 'svelte';
+	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 
 	import type { ViewName } from 'src/types';
@@ -13,11 +13,13 @@
 	];
 
 	let ready = false;
-	let showNav = false;
+	let showNav = true;
 	let lastScrollY = 0;
 
-	afterUpdate(() => {
-		ready = true;
+	onMount(() => {
+		setTimeout(() => {
+			ready = true;
+		}, 1000);
 	});
 
 	$: {
@@ -30,7 +32,7 @@
 	}
 </script>
 
-{#if showNav}
+{#if ready && showNav}
 	<div class="container" transition:fly={{ y: -10, duration: 300 }}>
 		{#each navLinks as navItem}
 			<a
@@ -58,9 +60,6 @@
 		background-color: var(--dim-bg-color);
 		border-radius: var(--theme-radius);
 		z-index: 20;
-	}
-	.animate {
-		animation: 3s ease 0s normal forwards 1 slidein;
 	}
 	.container a {
 		display: flex;
