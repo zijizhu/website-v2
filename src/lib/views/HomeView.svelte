@@ -15,10 +15,21 @@
 </p>
 
 <div class="button-container">
-	<button class="main-button project-button">
-		My Projects <ProjectIcon width={20} height={20} />
+	<button
+		class="main-button project-button"
+		on:click={() => {
+			document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+		}}
+	>
+		My Projects
+		<ProjectIcon width={20} height={20} />
 	</button>
-	<button class="main-button about-button">
+	<button
+		class="main-button about-button"
+		on:click={() => {
+			document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+		}}
+	>
 		About Me
 		<PersonIcon width={20} height={20} />
 	</button>

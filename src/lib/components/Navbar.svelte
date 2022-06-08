@@ -29,7 +29,8 @@
 		{#each navLinks as navItem}
 			<a
 				href={navItem.href}
-				on:click={() => document.getElementById(navItem.view)?.scrollTo({ behavior: 'smooth' })}
+				on:click={() =>
+					document.getElementById(navItem.view)?.scrollIntoView({ behavior: 'smooth' })}
 			>
 				{navItem.name}
 				{#if $currentView === navItem.view}
