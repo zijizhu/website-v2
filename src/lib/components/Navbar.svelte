@@ -54,9 +54,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		font-size: 1.25rem;
-		margin: 0 1rem 0 1rem;
+		font-size: 1rem;
+		margin: 0 0.75rem 0 0.75rem;
 		transition-duration: var(--transition-time);
+	}
+	@media (min-width: 768px) {
+		.container a {
+			font-size: 1.25rem;
+			margin: 0 1rem 0 1rem;
+		}
 	}
 	.container a:hover {
 		color: var(--primary-color);

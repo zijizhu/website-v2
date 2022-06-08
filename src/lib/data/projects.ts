@@ -11,7 +11,8 @@ const projects: ProjectInfo[] = [
 		downloadLink: 'https://apps.apple.com/au/app/medician/id1584595040',
 		techs: ['React Native', 'TypeScript', 'MobX State Tree', 'SQLite'],
 		techIconNames: ['react', 'typescript', 'mst', 'database'],
-		image: 'medician.png'
+		imgSrc: 'medician.png',
+		imgAlt: 'Medician App'
 	},
 	{
 		name: 'TaskHouse',
@@ -20,7 +21,8 @@ const projects: ProjectInfo[] = [
 			'TaskHouse is a collaborative platform for teams to communicate the state of their tasks, for users to connect with their collaborators through a user-friendly interface.',
 		techs: ['React', 'TypeScript', 'Material UI', 'Firebase'],
 		techIconNames: ['react', 'typescript', 'material', 'firebase'],
-		image: 'taskhouse.png'
+		imgSrc: 'taskhouse.png',
+		imgAlt: 'Taskhouse App'
 	},
 	{
 		name: 'Footsteps',
@@ -31,7 +33,8 @@ const projects: ProjectInfo[] = [
 		sourceLink: 'https://github.com/zijizhu/footsteps',
 		techs: ['React Native'],
 		techIconNames: ['react'],
-		image: 'footsteps.png'
+		imgSrc: 'footsteps.png',
+		imgAlt: 'Footsteps App'
 	}
 ];
 

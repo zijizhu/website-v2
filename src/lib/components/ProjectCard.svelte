@@ -10,7 +10,7 @@
 </script>
 
 <div class="container">
-	<img src={project.image} alt="Footsteps" />
+	<img src={project.imgSrc} alt={project.imgAlt} />
 
 	<div class="description-container">
 		<h3>{project.name}</h3>
