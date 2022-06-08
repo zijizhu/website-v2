@@ -30,7 +30,6 @@
 		width: 100%;
 		padding: 1rem;
 		display: flex;
-		font-weight: 500;
 		font-size: 1.25rem;
 		margin-top: 1rem;
 		cursor: pointer;

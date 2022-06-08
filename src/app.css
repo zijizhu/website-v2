@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import '@fontsource/outfit/500.css';
+@import '@fontsource/outfit/700.css';
+
 
 :root {
   font-family: 'Outfit', sans-serif;
@@ -28,7 +30,9 @@ body {
   min-height: 100vh;
   color: var(--text-color);
   background-color: var(--white);
+  font-family: "Outfit";
   font-weight: 500;
+  font-style: normal;
 }
 
 button,

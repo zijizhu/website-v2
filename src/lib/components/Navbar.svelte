@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { afterUpdate } from 'svelte';
 	import { fly } from 'svelte/transition';
 
 	import type { ViewName } from 'src/types';
@@ -11,8 +12,13 @@
 		{ view: 'about', name: 'About', href: '#about' }
 	];
 
-	let showNav = true;
+	let ready = false;
+	let showNav = false;
 	let lastScrollY = 0;
+
+	afterUpdate(() => {
+		ready = true;
+	});
 
 	$: {
 		if ($windowScrollY > lastScrollY) {
@@ -52,6 +58,9 @@
 		background-color: var(--dim-bg-color);
 		border-radius: var(--theme-radius);
 		z-index: 20;
+	}
+	.animate {
+		animation: 3s ease 0s normal forwards 1 slidein;
 	}
 	.container a {
 		display: flex;

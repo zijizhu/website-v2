@@ -100,7 +100,6 @@
 	}
 	.project-link {
 		display: inline;
-		font-weight: 600;
 		font-size: 1.25rem;
 		color: var(--primary-color);
 	}
