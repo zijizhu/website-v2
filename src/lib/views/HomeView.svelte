@@ -44,22 +44,26 @@
 </div>
 
 <style>
+	h3 {
+		font-size: 1.5rem;
+		margin: 0.5rem 0 0.5rem 0;
+		animation: 1s ease 0s normal forwards 1 fadein;
+	}
 	h1 {
 		font-size: 3rem;
 		line-height: 1;
 		margin: 1rem 0 1rem 0;
+		animation: 2s ease 0s normal forwards 1 fadein;
 	}
 	h2 {
 		font-size: 2rem;
 		margin: 0.5rem 0 0.5rem 0;
 		color: var(--primary-color);
-	}
-	h3 {
-		font-size: 1.5rem;
-		margin: 0.5rem 0 0.5rem 0;
+		animation: 2.5s ease 0s normal forwards 1 fadein;
 	}
 	p {
 		font-size: 1.25rem;
+		animation: 2.5s ease 0s normal forwards 1 fadein;
 	}
 	@media (min-width: 640px) {
 		h1 {
@@ -75,6 +79,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		margin: 1rem 0 1rem 0;
+		animation: 3s ease 0s normal forwards 1 slidein;
 	}
 	@media (min-width: 640px) {
 		.button-container {

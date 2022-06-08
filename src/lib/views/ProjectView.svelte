@@ -19,8 +19,10 @@
 		font-size: 2rem;
 		line-height: 1;
 		margin: 1rem 0 1rem 0;
+		animation: 3s ease 0s normal forwards 1 fadein;
 	}
 	h2 {
 		color: var(--primary-color);
+		animation: 3s ease 0s normal forwards 1 fadein;
 	}
 </style>
