@@ -1,38 +1,40 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 
-	let navLinks: { name: string; href: string }[] = [
-		{ name: 'Home', href: '#home' },
-		{ name: 'Projects', href: '#projects' },
-		{ name: 'About', href: '#about' }
+	import type { ViewName } from 'src/types';
+	import { currentView } from '$lib/stores';
+	import { windowScrollY } from '$lib/stores';
+
+	const navLinks: { view: ViewName; name: string; href: string }[] = [
+		{ view: 'home', name: 'Home', href: '#home' },
+		{ view: 'projects', name: 'Projects', href: '#projects' },
+		{ view: 'about', name: 'About', href: '#about' }
 	];
 
 	let showNav = true;
 	let lastScrollY = 0;
 
-	onMount(() => {
-		function onScroll() {
-			if (window === undefined) return;
-			if (window.scrollY > lastScrollY) {
-				showNav = false;
-			} else {
-				showNav = true;
-			}
-			lastScrollY = window.scrollY;
+	$: {
+		if ($windowScrollY > lastScrollY) {
+			showNav = false;
+		} else {
+			showNav = true;
 		}
-		window.addEventListener('scroll', onScroll);
-
-		return () => window.removeEventListener('scroll', onScroll);
-	});
+		lastScrollY = $windowScrollY;
+	}
 </script>
 
 {#if showNav}
 	<div class="container" transition:fly={{ y: -10, duration: 300 }}>
 		{#each navLinks as navItem}
-			<a href={navItem.href}>
+			<a
+				href={navItem.href}
+				on:click={() => document.getElementById(navItem.view)?.scrollTo({ behavior: 'smooth' })}
+			>
 				{navItem.name}
-				<div class="indicator" />
+				{#if $currentView === navItem.view}
+					<div class="indicator" />
+				{/if}
 			</a>
 		{/each}
 	</div>

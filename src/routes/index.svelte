@@ -1,7 +1,8 @@
 <script lang="ts">
-	import ViewLayout from '$lib/components/ViewLayout.svelte';
+	import { windowScrollY } from '$lib/stores';
 	import HomeView from '$lib/views/HomeView.svelte';
 	import ProjectView from '$lib/views/ProjectView.svelte';
+	import ViewLayout from '$lib/components/ViewLayout.svelte';
 </script>
 
 <svelte:head>
@@ -9,10 +10,12 @@
 	<meta name="description" content="Zhijie Zhu's portfolio website" />
 </svelte:head>
 
-<ViewLayout background botSkew height={40}>
+<svelte:window bind:scrollY={$windowScrollY} />
+
+<ViewLayout viewName="home" background botSkew height={40}>
 	<HomeView />
 </ViewLayout>
 
-<ViewLayout>
+<ViewLayout viewName="projects">
 	<ProjectView />
 </ViewLayout>

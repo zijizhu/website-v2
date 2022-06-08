@@ -1,11 +1,23 @@
 <script lang="ts">
-	export let height: number | undefined = undefined;
+	import { viewOffsets, currentView } from '$lib/stores';
+	import type { ViewName } from 'src/types';
+
+	export let viewName: ViewName;
 	export let topSkew: boolean = false;
 	export let botSkew: boolean = false;
 	export let background: boolean = false;
+	export let height: number | undefined = undefined;
+
+	let viewRef: HTMLElement | undefined;
+
+	$: if (viewRef) {
+		viewOffsets.update((offsets) => ({ ...offsets, [viewName]: viewRef?.offsetTop }));
+	}
 </script>
 
 <section
+	id={viewName}
+	bind:this={viewRef}
 	style:height={height && `${height}rem`}
 	class:top-skew={topSkew}
 	class:bot-skew={botSkew}

@@ -18,6 +18,10 @@
   background-color: var(--selection-color);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
