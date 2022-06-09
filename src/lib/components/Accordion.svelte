@@ -2,10 +2,9 @@
 	import { slide } from 'svelte/transition';
 	import ChevronIcon from '~icons/akar-icons/chevron-right';
 
+	export let isOpen = true;
 	export let title: string;
 	export let darkBg: boolean | undefined;
-
-	let isOpen = true;
 
 	function toggleOpen() {
 		isOpen = !isOpen;

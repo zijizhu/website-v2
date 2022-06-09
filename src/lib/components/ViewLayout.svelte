@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { viewOffsets, currentView } from '$lib/stores';
+	import { viewOffsets } from '$lib/stores';
 	import type { ViewName } from 'src/types';
 
 	export let viewName: ViewName;

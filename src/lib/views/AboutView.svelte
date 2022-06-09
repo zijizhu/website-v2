@@ -34,7 +34,7 @@
 <h2>Academic Highlights</h2>
 
 <div class="animation-wrapper">
-	<Accordion darkBg title="UNSW Computer Science">
+	<Accordion isOpen darkBg title="UNSW Computer Science">
 		<div class="courses-container">
 			{#each bcsCourses as course}
 				<CourseCard courseInfo={course} />
@@ -43,7 +43,7 @@
 	</Accordion>
 </div>
 <div class="animation-wrapper">
-	<Accordion darkBg title="UNSW Master of IT">
+	<Accordion isOpen darkBg title="UNSW Master of IT">
 		<div class="courses-container">
 			{#each mitCourses as course}
 				<CourseCard courseInfo={course} />
