@@ -14,3 +14,11 @@ export interface ProjectInfo {
 	imgSrc: string;
 	imgAlt: string;
 }
+
+export interface CourseInfo {
+	code: string;
+	link: string;
+	title: string;
+	description: string;
+	mark: string;
+}

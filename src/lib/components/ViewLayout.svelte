@@ -49,6 +49,6 @@
 		clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 	}
 	.top-skew {
-		clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(0 5rem, 100% 0%, 100% 100%, 0% 100%);
 	}
 </style>
