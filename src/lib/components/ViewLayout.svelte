@@ -11,7 +11,6 @@
 	let currViewHeight: number;
 
 	$: viewHeights.update((heights) => ({ ...heights, [viewName]: currViewHeight }));
-	$: console.log(viewName, currViewHeight);
 </script>
 
 <section
