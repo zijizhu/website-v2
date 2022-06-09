@@ -20,7 +20,7 @@
 </button>
 
 {#if isOpen}
-	<div transition:slide={{ duration: 500 }} class="projects-container">
+	<div transition:slide={{ duration: 500 }} class="content-container">
 		<slot />
 	</div>
 {/if}
@@ -58,7 +58,7 @@
 	[aria-expanded='true'] .icon {
 		transform: rotate(0.25turn);
 	}
-	.projects-container {
+	.content-container {
 		display: flex;
 		flex-direction: column;
 		padding: 0.25rem;

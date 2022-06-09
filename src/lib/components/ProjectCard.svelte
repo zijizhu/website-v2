@@ -15,14 +15,14 @@
 	<div class="description-container">
 		<h3>{project.name}</h3>
 
-		<span class="project-link">
+		<div class="project-event">
 			{project.event}
 			{#if project.link}
 				<a href={project.link}>
 					<LinkIcon width={25} height={25} />
 				</a>
 			{/if}
-		</span>
+		</div>
 
 		<p>
 			{project.detail}
@@ -98,12 +98,12 @@
 		font-size: 1.75rem;
 		line-height: 1;
 	}
-	.project-link {
+	.project-event {
 		display: inline;
 		font-size: 1.25rem;
 		color: var(--primary-color);
 	}
-	.project-link a {
+	.project-event a {
 		color: var(--primary-color);
 	}
 	p {
