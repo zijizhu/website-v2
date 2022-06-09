@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { windowScrollY } from '$lib/stores';
 	import HomeView from '$lib/views/HomeView.svelte';
+	import AboutView from '$lib/views/AboutView.svelte';
 	import ProjectView from '$lib/views/ProjectView.svelte';
 	import ViewLayout from '$lib/components/ViewLayout.svelte';
 </script>
@@ -18,4 +19,8 @@
 
 <ViewLayout viewName="projects">
 	<ProjectView />
+</ViewLayout>
+
+<ViewLayout viewName="about" background topSkew>
+	<AboutView />
 </ViewLayout>

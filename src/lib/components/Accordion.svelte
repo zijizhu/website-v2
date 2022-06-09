@@ -3,6 +3,7 @@
 	import ChevronIcon from '~icons/akar-icons/chevron-right';
 
 	export let title: string;
+	export let darkBg: boolean | undefined;
 
 	let isOpen = true;
 
@@ -11,7 +12,7 @@
 	}
 </script>
 
-<button on:click={toggleOpen} aria-expanded={isOpen}>
+<button class:dark-bg={darkBg} on:click={toggleOpen} aria-expanded={isOpen}>
 	<div class="icon">
 		<ChevronIcon />
 	</div>
@@ -40,6 +41,12 @@
 	}
 	button:hover {
 		background-color: var(--dim-bg-color);
+	}
+	.dark-bg {
+		background-color: var(--dim-bg-color);
+	}
+	.dark-bg:hover {
+		background-color: var(--extra-dim-bg-color);
 	}
 	.icon {
 		display: flex;

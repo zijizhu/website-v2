@@ -9,7 +9,7 @@
 <h2>Check out a few projects I've involved in</h2>
 
 <div class="animation-wrapper">
-	<Accordion title="Mobile and Web Apps">
+	<Accordion darkBg={false} title="Mobile and Web Apps">
 		{#each projects as project}
 			<ProjectCard {project} />
 		{/each}
@@ -18,7 +18,7 @@
 
 <style>
 	h1 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		line-height: 1;
 		margin: 1rem 0 1rem 0;
 		animation: 3s ease 0s normal forwards 1 fadein;

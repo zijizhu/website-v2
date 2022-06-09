@@ -38,6 +38,7 @@
 	}
 	.view-container {
 		display: flex;
+		width: 100%;
 		max-width: 60rem;
 		flex-direction: column;
 	}
