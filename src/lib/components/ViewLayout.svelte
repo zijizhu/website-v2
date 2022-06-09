@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { viewOffsets } from '$lib/stores';
+	import { viewHeights } from '$lib/stores';
 	import type { ViewName } from 'src/types';
 
 	export let viewName: ViewName;
@@ -8,16 +8,15 @@
 	export let background: boolean = false;
 	export let height: number | undefined = undefined;
 
-	let viewRef: HTMLElement | undefined;
+	let currViewHeight: number;
 
-	$: if (viewRef) {
-		viewOffsets.update((offsets) => ({ ...offsets, [viewName]: viewRef?.offsetTop }));
-	}
+	$: viewHeights.update((heights) => ({ ...heights, [viewName]: currViewHeight }));
+	$: console.log(viewName, currViewHeight);
 </script>
 
 <section
 	id={viewName}
-	bind:this={viewRef}
+	bind:offsetHeight={currViewHeight}
 	style:height={height && `${height}rem`}
 	class:top-skew={topSkew}
 	class:bot-skew={botSkew}

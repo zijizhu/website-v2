@@ -5,21 +5,26 @@ import type { ViewName } from 'src/types';
 
 export const windowScrollY = writable(0);
 
-type ViewOffsets = {
+type ViewHeights = {
 	[key in ViewName]: number;
 };
 
-export const viewOffsets = writable<ViewOffsets>({
+export const viewHeights = writable<ViewHeights>({
 	home: 0,
 	projects: 0,
 	about: 0
 });
 
-export const currentView = derived<[Writable<number>, Writable<ViewOffsets>], ViewName>(
-	[windowScrollY, viewOffsets],
-	([$windowScrollY, $viewOffsets], set) => {
+export const currentView = derived<[Writable<number>, Writable<ViewHeights>], ViewName>(
+	[windowScrollY, viewHeights],
+	([$windowScrollY, $viewHeights], set) => {
+		const viewOffsets = {
+			home: 0,
+			projects: $viewHeights.home,
+			about: $viewHeights.home + $viewHeights.projects
+		};
 		// distance from scrollY to each view
-		const distances: [string, number][] = Object.entries($viewOffsets).map(([view, offset]) => [
+		const distances: [string, number][] = Object.entries(viewOffsets).map(([view, offset]) => [
 			view,
 			Math.abs(offset - $windowScrollY)
 		]);
