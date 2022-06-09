@@ -27,7 +27,7 @@
 	<button
 		class="main-button about-button"
 		on:click={() => {
-			document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+			document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
 		}}
 	>
 		About Me

@@ -42,6 +42,7 @@
 		</div>
 	</Accordion>
 </div>
+
 <div class="animation-wrapper">
 	<Accordion isOpen={false} darkBg title="UNSW Master of IT">
 		<div class="courses-container">
@@ -52,6 +53,14 @@
 	</Accordion>
 </div>
 
+<h1>Contact Me</h1>
+
+<p style="margin-bottom: 5rem;">
+	Feel free to reach me at
+	<a href="mailto:zhuzhijie1003@outlook.com">zhuzhijie1003@outlook.com</a>
+	at anytime
+</p>
+
 <style>
 	h1 {
 		line-height: 1;
@@ -60,7 +69,7 @@
 		animation: 3s ease 0s normal forwards 1 fadein;
 	}
 	p {
-		font-size: 1rem;
+		font-size: 1.25rem;
 		margin: 0.5rem 0 0.5rem 0;
 		animation: 3s ease 0s normal forwards 1 fadein;
 	}
