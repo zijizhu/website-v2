@@ -10,8 +10,9 @@
 <h2>I work with web and data.</h2>
 
 <p>
-	I am currently studying Master of IT at UNSW. I am also one of the CSESoc Projects Team. You know
-	what I&apos;m most proud of? I&apos;m 1/3 of logicpop.
+	I am currently studying Master of IT at UNSW. I am one of the CSESoc Projects Team. <br />
+	You know what I&apos;m most proud of? I&apos;m 1/3 of
+	<a class="special-link" href="https://www.logicpop.com.au/">logicpop</a>.
 </p>
 
 <div class="button-container">

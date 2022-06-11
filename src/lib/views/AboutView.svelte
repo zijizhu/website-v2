@@ -14,20 +14,20 @@
 <p class="strong">Education</p>
 <p>
 	-
-	<a href={bcsLink}> Bachelor of Computer Science </a>
+	<a class="special-link" href={bcsLink}> Bachelor of Computer Science </a>
 	@UNSW (2019-2021) <br />
 	-
-	<a href={mitLink}> Master of Information Technology </a>
+	<a class="special-link" href={mitLink}> Master of Information Technology </a>
 	@UNSW (2022)
 </p>
 
 <p class="strong">Experiences</p>
 <p>
 	- Former HSC Math 3U/4U Tutor
-	<a href={uwinLink}> @Uwin Edu </a>
+	<a class="special-link" href={uwinLink}> @Uwin Edu </a>
 	(2019-2021) <br />
 	- UNSW
-	<a href={csesocLink}> CSESoc </a>
+	<a class="special-link" href={csesocLink}> CSESoc </a>
 	Projects Team (2022)
 </p>
 
@@ -80,9 +80,6 @@
 	}
 	.strong {
 		font-weight: 700;
-	}
-	a {
-		color: var(--primary-color);
 	}
 	h2 {
 		animation: 3s ease 0s normal forwards 1 fadein;

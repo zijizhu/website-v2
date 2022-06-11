@@ -57,6 +57,18 @@ a {
   text-decoration: none;
 }
 
+.special-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition-duration: var(--transition-time);
+}
+.special-link:hover {
+  padding: 0 0.5rem 0 0.5rem;
+  text-decoration: none;
+  background-color: var(--dim-bg-color);
+  border-radius: var(--theme-radius);
+}
+
 @keyframes fadein {
   0% {
     opacity: 0;

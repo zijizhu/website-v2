@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { windowScrollY } from '$lib/stores';
 	import HomeView from '$lib/views/HomeView.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
 	import AboutView from '$lib/views/AboutView.svelte';
 	import ProjectView from '$lib/views/ProjectView.svelte';
 	import ViewLayout from '$lib/components/ViewLayout.svelte';
@@ -12,6 +13,8 @@
 </svelte:head>
 
 <svelte:window bind:scrollY={$windowScrollY} />
+
+<Navbar />
 
 <ViewLayout viewName="home" background botSkew height={40}>
 	<HomeView />
