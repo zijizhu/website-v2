@@ -15,6 +15,17 @@ const projects: ProjectInfo[] = [
 		imgAlt: 'Medician App'
 	},
 	{
+		name: 'cms.csesoc.unsw.edu.au',
+		event: 'UNSW CSESoc Projects Team',
+		detail:
+			'Footsteps aims to link a students schooling experience with relevant industry mentors who will guide them through their studies and decision on future career choices. (MVP)',
+		sourceLink: 'https://github.com/csesoc/cms.csesoc.unsw.edu.au',
+		techs: ['React', 'Redux', 'TypeScript', 'Next.js'],
+		techIconNames: ['react', 'redux', 'typescript', 'next'],
+		imgSrc: 'CSESoc.png',
+		imgAlt: 'CSESoc Website CMS'
+	},
+	{
 		name: 'TaskHouse',
 		event: 'CompSci Capstone project',
 		detail:

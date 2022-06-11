@@ -1,6 +1,14 @@
 export type ViewName = 'home' | 'projects' | 'about';
 
-export type IconName = 'database' | 'firebase' | 'material' | 'typescript' | 'mst' | 'react';
+export type IconName =
+	| 'database'
+	| 'firebase'
+	| 'material'
+	| 'typescript'
+	| 'mst'
+	| 'react'
+	| 'redux'
+	| 'next';
 
 export interface ProjectInfo {
 	name: string;

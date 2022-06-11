@@ -1,11 +1,13 @@
 <script lang="ts">
-	import ReactIcon from '~icons/la/react';
-	import FirebaseIcon from '~icons/logos/firebase';
-	import MaterialIcon from '~icons/logos/material-ui';
-	import TypeScriptIcon from '~icons/logos/typescript-icon';
-	import MobXIcon from '~icons/logos/mobx';
 	import SqlIcon from '~icons/carbon/sql';
+	import ReactIcon from '~icons/la/react';
+	import MobXIcon from '~icons/logos/mobx';
+	import ReduxIcon from '~icons/logos/redux';
+	import FirebaseIcon from '~icons/logos/firebase';
+	import NextjsIcon from '~icons/logos/nextjs-icon';
+	import MaterialIcon from '~icons/logos/material-ui';
 	import Unknown from '~icons/akar-icons/question-fill';
+	import TypeScriptIcon from '~icons/logos/typescript-icon';
 
 	import type { IconName } from 'src/types';
 
@@ -24,6 +26,10 @@
 	<MobXIcon width={35} height={35} style="margin-right: 0.5rem;" />
 {:else if name === 'database'}
 	<SqlIcon width={35} height={35} style="margin-right: 0.5rem;" />
+{:else if name === 'redux'}
+	<ReduxIcon width={35} height={35} style="margin-right: 0.5rem;" />
+{:else if name === 'next'}
+	<NextjsIcon width={35} height={35} style="margin-right: 0.5rem;" />
 {:else}
 	<Unknown width={35} height={35} style="margin-right: 0.5rem;" />
 {/if}
