@@ -18,7 +18,7 @@ const projects: ProjectInfo[] = [
 		name: 'cms.csesoc.unsw.edu.au',
 		event: 'UNSW CSESoc Projects Team',
 		detail:
-			'Footsteps aims to link a students schooling experience with relevant industry mentors who will guide them through their studies and decision on future career choices. (MVP)',
+			'A responsive, UX-focused web application that will become the hub for all things CSESoc. For the sake of the future, the team has committed to creating a custom Content Management System (CMS) with the end goal of allowing extremely easy editing without touching code. (WIP)',
 		sourceLink: 'https://github.com/csesoc/cms.csesoc.unsw.edu.au',
 		techs: ['React', 'Redux', 'TypeScript', 'Next.js'],
 		techIconNames: ['react', 'redux', 'typescript', 'next'],
