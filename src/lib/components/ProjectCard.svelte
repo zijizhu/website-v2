@@ -3,8 +3,9 @@
 	import GitHubIcon from '~icons/akar-icons/github-fill';
 	import AppStoreIcon from '~icons/ion/logo-apple-appstore';
 
-	import TechIcon from '$lib/components/TechIcon.svelte';
 	import type { ProjectInfo } from 'src/types';
+	import TechIcon from '$lib/components/TechIcon.svelte';
+	import Icon from '$lib/components/Icon.svelte';
 
 	export let project: ProjectInfo;
 </script>
@@ -29,8 +30,8 @@
 		</p>
 
 		<div class="icon-container">
-			{#each project.techIconNames as iconName}
-				<TechIcon name={iconName} />
+			{#each project.techIconNames as iconName, i}
+				<TechIcon {iconName} techName={project.techs[i]} />
 			{/each}
 		</div>
 

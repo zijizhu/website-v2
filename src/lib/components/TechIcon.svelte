@@ -1,35 +1,35 @@
 <script lang="ts">
-	import SqlIcon from '~icons/carbon/sql';
-	import ReactIcon from '~icons/la/react';
-	import MobXIcon from '~icons/logos/mobx';
-	import ReduxIcon from '~icons/logos/redux';
-	import FirebaseIcon from '~icons/logos/firebase';
-	import NextjsIcon from '~icons/logos/nextjs-icon';
-	import MaterialIcon from '~icons/logos/material-ui';
-	import Unknown from '~icons/akar-icons/question-fill';
-	import TypeScriptIcon from '~icons/logos/typescript-icon';
-
 	import type { IconName } from 'src/types';
+	import Icon from '$lib/components/Icon.svelte';
 
-	export let name: IconName | undefined = undefined;
+	export let techName: string;
+	export let iconName: IconName;
+
+	let showName = false;
 </script>
 
-{#if name === 'react'}
-	<ReactIcon width={35} height={35} style="margin-right: 0.5rem; color: #0074a6;" />
-{:else if name === 'firebase'}
-	<FirebaseIcon width={35} height={35} style="margin-right: 0.5rem;" />
-{:else if name === 'material'}
-	<MaterialIcon width={35} height={35} style="margin-right: 0.5rem;" />
-{:else if name === 'typescript'}
-	<TypeScriptIcon width={35} height={35} style="margin-right: 0.5rem;" />
-{:else if name === 'mst'}
-	<MobXIcon width={35} height={35} style="margin-right: 0.5rem;" />
-{:else if name === 'database'}
-	<SqlIcon width={35} height={35} style="margin-right: 0.5rem;" />
-{:else if name === 'redux'}
-	<ReduxIcon width={35} height={35} style="margin-right: 0.5rem;" />
-{:else if name === 'next'}
-	<NextjsIcon width={35} height={35} style="margin-right: 0.5rem;" />
-{:else}
-	<Unknown width={35} height={35} style="margin-right: 0.5rem;" />
-{/if}
+<div
+	on:mouseleave={() => (showName = false)}
+	on:mouseenter={() => (showName = true)}
+	class="tech-icon"
+>
+	<Icon name={iconName} />
+	{#if showName}
+		{techName}
+	{/if}
+</div>
+
+<style>
+	.tech-icon {
+		display: flex;
+		align-items: center;
+		margin-right: 0.5rem;
+		padding: 0.25rem;
+		transition-duration: var(--transition-time);
+	}
+	.tech-icon:hover {
+		padding-right: 1rem;
+		border-radius: var(--theme-radius);
+		background-color: var(--dim-bg-color);
+	}
+</style>
