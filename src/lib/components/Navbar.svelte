@@ -7,9 +7,9 @@
 	import { windowScrollY } from '$lib/stores';
 
 	const navLinks: { view: ViewName; name: string; href: string }[] = [
-		{ view: 'home', name: 'Home', href: '#home' },
-		{ view: 'projects', name: 'Projects', href: '#projects' },
-		{ view: 'about', name: 'About', href: '#about' }
+		{ view: 'home', name: 'Home', href: '/#home' },
+		{ view: 'projects', name: 'Projects', href: '/#projects' },
+		{ view: 'about', name: 'About', href: '/#about' }
 	];
 
 	let ready = false;
