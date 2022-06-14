@@ -57,7 +57,7 @@
 
 <p style="margin-bottom: 5rem;">
 	Feel free to reach me at
-	<a href="mailto:zhuzhijie1003@outlook.com">zhuzhijie1003@outlook.com</a>
+	<a class="special-link" href="mailto:zhuzhijie1003@outlook.com">zhuzhijie1003@outlook.com</a>
 	at anytime
 </p>
 

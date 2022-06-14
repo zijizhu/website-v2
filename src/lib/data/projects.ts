@@ -11,6 +11,12 @@ const projects: ProjectInfo[] = [
 		downloadLink: 'https://apps.apple.com/au/app/medician/id1584595040',
 		techs: ['React Native', 'TypeScript', 'MobX State Tree', 'SQLite'],
 		techIconNames: ['react', 'typescript', 'mst', 'database'],
+		techLinks: [
+			'https://reactnative.dev/',
+			'https://www.typescriptlang.org/',
+			'https://mobx-state-tree.js.org/intro/welcome',
+			'https://www.sqlite.org/index.html'
+		],
 		imgSrc: 'medician.png',
 		imgAlt: 'Medician App'
 	},
@@ -22,6 +28,12 @@ const projects: ProjectInfo[] = [
 		sourceLink: 'https://github.com/csesoc/cms.csesoc.unsw.edu.au',
 		techs: ['React', 'Redux', 'TypeScript', 'Next.js'],
 		techIconNames: ['react', 'redux', 'typescript', 'next'],
+		techLinks: [
+			'https://reactjs.org/',
+			'https://redux-toolkit.js.org/',
+			'https://www.typescriptlang.org/',
+			'https://nextjs.org/'
+		],
 		imgSrc: 'CSESoc.png',
 		imgAlt: 'CSESoc Website CMS'
 	},
@@ -32,6 +44,12 @@ const projects: ProjectInfo[] = [
 			'TaskHouse is a collaborative platform for teams to communicate the state of their tasks, for users to connect with their collaborators through a user-friendly interface.',
 		techs: ['React', 'TypeScript', 'Material UI', 'Firebase'],
 		techIconNames: ['react', 'typescript', 'material', 'firebase'],
+		techLinks: [
+			'https://reactjs.org/',
+			'https://www.typescriptlang.org/',
+			'https://mui.com/',
+			'https://firebase.google.com/'
+		],
 		imgSrc: 'taskhouse.png',
 		imgAlt: 'Taskhouse App'
 	},
@@ -44,6 +62,7 @@ const projects: ProjectInfo[] = [
 		sourceLink: 'https://github.com/zijizhu/footsteps',
 		techs: ['React Native'],
 		techIconNames: ['react'],
+		techLinks: ['https://reactnative.dev/'],
 		imgSrc: 'footsteps.png',
 		imgAlt: 'Footsteps App'
 	}

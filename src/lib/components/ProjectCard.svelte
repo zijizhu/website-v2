@@ -31,7 +31,7 @@
 
 		<div class="icon-container">
 			{#each project.techIconNames as iconName, i}
-				<TechIcon {iconName} techName={project.techs[i]} />
+				<TechIcon {iconName} techName={project.techs[i]} techLink={project.techLinks[i]} />
 			{/each}
 		</div>
 

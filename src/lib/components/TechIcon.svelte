@@ -4,6 +4,7 @@
 
 	export let techName: string;
 	export let iconName: IconName;
+	export let techLink: string;
 
 	let showName = false;
 
@@ -33,7 +34,7 @@
 >
 	<Icon name={iconName} />
 	{#if showName}
-		<span class="tech-name">{techName}</span>
+		<a href={techLink} class="tech-name">{techName}</a>
 	{/if}
 </div>
 
@@ -55,5 +56,9 @@
 	}
 	.tech-name {
 		margin: 0 0.25rem 0 0.5rem;
+		transition-duration: var(--transition-time);
+	}
+	.tech-name:hover {
+		color: var(--primary-color);
 	}
 </style>
