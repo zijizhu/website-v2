@@ -3,11 +3,11 @@ import { writable, derived } from 'svelte/store';
 
 import type { ViewName } from 'src/types';
 
+export const windowWidth = writable(0);
+
 export const windowScrollY = writable(0);
 
-type ViewHeights = {
-	[key in ViewName]: number;
-};
+type ViewHeights = Record<ViewName, number>;
 
 export const viewHeights = writable<ViewHeights>({
 	home: 0,

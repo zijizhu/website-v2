@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { IconName } from 'src/types';
+	import { windowWidth } from '$lib/stores';
 	import Icon from '$lib/components/Icon.svelte';
 
 	export let techName: string;
@@ -25,18 +26,24 @@
 	}
 </script>
 
-<div
-	use:clickOutside
-	on:click={() => (showName = true)}
-	on:outclick={() => (showName = false)}
-	class="tech-icon"
-	class:tech-icon-active={showName}
->
-	<Icon name={iconName} />
-	{#if showName}
-		<a href={techLink} class="tech-name">{techName}</a>
-	{/if}
-</div>
+{#if $windowWidth < 768}
+	<a href={techLink} class="tech-icon">
+		<Icon name={iconName} />
+	</a>
+{:else}
+	<div
+		use:clickOutside
+		on:click={() => (showName = true)}
+		on:outclick={() => (showName = false)}
+		class="tech-icon"
+		class:tech-icon-active={showName}
+	>
+		<Icon name={iconName} />
+		{#if showName}
+			<a href={techLink} class="tech-name">{techName}</a>
+		{/if}
+	</div>
+{/if}
 
 <style>
 	.tech-icon {

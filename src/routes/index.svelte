@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { windowScrollY } from '$lib/stores';
 	import HomeView from '$lib/views/HomeView.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import AboutView from '$lib/views/AboutView.svelte';
@@ -11,8 +10,6 @@
 	<title>Richard Zhu</title>
 	<meta name="description" content="Zhijie Zhu's portfolio website" />
 </svelte:head>
-
-<svelte:window bind:scrollY={$windowScrollY} />
 
 <Navbar />
 
