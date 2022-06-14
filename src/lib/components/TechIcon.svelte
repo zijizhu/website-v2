@@ -6,16 +6,34 @@
 	export let iconName: IconName;
 
 	let showName = false;
+
+	export function clickOutside(node: Node) {
+		const handleClick = (event: MouseEvent) => {
+			if (!node.contains(event.target as Node | null)) {
+				node.dispatchEvent(new CustomEvent('outclick'));
+			}
+		};
+
+		document.addEventListener('click', handleClick, true);
+
+		return {
+			destroy() {
+				document.removeEventListener('click', handleClick, true);
+			}
+		};
+	}
 </script>
 
 <div
-	on:mouseleave={() => (showName = false)}
-	on:mouseenter={() => (showName = true)}
+	use:clickOutside
+	on:click={() => (showName = true)}
+	on:outclick={() => (showName = false)}
 	class="tech-icon"
+	class:tech-icon-active={showName}
 >
 	<Icon name={iconName} />
 	{#if showName}
-		{techName}
+		<span class="tech-name">{techName}</span>
 	{/if}
 </div>
 
@@ -25,11 +43,17 @@
 		align-items: center;
 		margin-right: 0.5rem;
 		padding: 0.25rem;
+		cursor: pointer;
+		border-radius: var(--theme-radius);
 		transition-duration: var(--transition-time);
 	}
 	.tech-icon:hover {
-		padding-right: 1rem;
-		border-radius: var(--theme-radius);
 		background-color: var(--dim-bg-color);
+	}
+	.tech-icon-active {
+		background-color: var(--dim-bg-color);
+	}
+	.tech-name {
+		margin: 0 0.25rem 0 0.5rem;
 	}
 </style>

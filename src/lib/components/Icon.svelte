@@ -15,21 +15,21 @@
 </script>
 
 {#if name === 'react'}
-	<ReactIcon width={35} height={35} style="margin-right: 0.5rem; color: #0074a6;" />
+	<ReactIcon width={35} height={35} style="color: #0074a6;" />
 {:else if name === 'firebase'}
-	<FirebaseIcon width={35} height={35} style="margin-right: 0.5rem;" />
+	<FirebaseIcon width={35} height={35} />
 {:else if name === 'material'}
-	<MaterialIcon width={35} height={35} style="margin-right: 0.5rem;" />
+	<MaterialIcon width={35} height={35} />
 {:else if name === 'typescript'}
-	<TypeScriptIcon width={35} height={35} style="margin-right: 0.5rem;" />
+	<TypeScriptIcon width={35} height={35} />
 {:else if name === 'mst'}
-	<MobXIcon width={35} height={35} style="margin-right: 0.5rem;" />
+	<MobXIcon width={35} height={35} />
 {:else if name === 'database'}
-	<SqlIcon width={35} height={35} style="margin-right: 0.5rem;" />
+	<SqlIcon width={35} height={35} />
 {:else if name === 'redux'}
-	<ReduxIcon width={35} height={35} style="margin-right: 0.5rem;" />
+	<ReduxIcon width={35} height={35} />
 {:else if name === 'next'}
-	<NextjsIcon width={35} height={35} style="margin-right: 0.5rem;" />
+	<NextjsIcon width={35} height={35} />
 {:else}
-	<Unknown width={35} height={35} style="margin-right: 0.5rem;" />
+	<Unknown width={35} height={35} />
 {/if}
